@@ -51,7 +51,7 @@ GROUP BY
     h.habitat_id, h.habitat_name, h.climate;
 
 SELECT (
-	SELECT MAX(a_count)
+	SELECT a_count
 	FROM (
 		SELECT COUNT( animal_id ) AS a_count
 		FROM animals WHERE habitat_id = 2
