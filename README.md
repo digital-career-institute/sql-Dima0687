@@ -51,12 +51,12 @@ GROUP BY
     h.habitat_id, h.habitat_name, h.climate;
 
 SELECT (
-		SELECT MAX(a_count)
-		FROM (
-			SELECT COUNT( animal_id ) AS a_count
-			FROM animals WHERE habitat_id = 2
-		) AS avg_count) 
-	AS animals_in_habitat_ocean, 
+	SELECT MAX(a_count)
+	FROM (
+		SELECT COUNT( animal_id ) AS a_count
+		FROM animals WHERE habitat_id = 2
+	     ) AS avg_count
+	) AS animals_in_habitat_ocean, 
 	COUNT( animal_id ) AS max_animals 
 FROM animals;
 ```
